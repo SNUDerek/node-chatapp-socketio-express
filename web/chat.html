@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>crapchat</h1>
+<h2 id="room"></h2>
+<ul id="users"></ul>
+
+  <textarea id="chat-history" name="chat-history" rows="16" cols="50"></textarea>
+    <br><br>
+    <form id="chat-form">
+      <label for="message">message:</label>
+      <input type="text" id="message" minlength=1, required, name="uname"><br><br>
+      <input id="send" type="submit" value="submit">
+    </form>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
