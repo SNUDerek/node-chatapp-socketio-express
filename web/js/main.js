@@ -25,9 +25,6 @@ socket.on('message', message => {
     setMessage(message)
 })
 
-// scroll to latest messages
-chatHistory.scrollTop = chatHistory.scrollHeight
-
 // submit message
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -39,8 +36,13 @@ chatForm.addEventListener('submit', (e) => {
     console.log(message)
     socket.emit('newMessage', message)
     e.target.elements.message.value = ''
-    e.target.elements.message.focus()
 })
+
+function scrollHistory() {
+    chatHistory.scrollTop = chatHistory.scrollHeight
+    chatHistory.focus()
+    chatForm.message.focus()
+}
 
 // send message to DOM
 function setMessage(message) {
@@ -49,6 +51,10 @@ function setMessage(message) {
     newLine = `\r\n${message}`
     history = history + newLine
     chatHistory.value = history
+    chatHistory.focus()
+    // scroll to latest messages
+    scrollHistory()
+    
 }
 
 // add room name to DOM
