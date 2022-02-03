@@ -2,6 +2,7 @@ const express = require('express')
 const http = require('http')
 const path = require('path')
 const socketio = require('socket.io')
+const cors = require('cors')
 
 const app = express()
 const server = http.createServer(app)
@@ -11,6 +12,8 @@ const { userJoined, getCurrentUser, userLeft, getRoomUsers } = require('./users'
 
 const adminName = 'crapbot'
 
+
+app.use(cors())
 
 // static serving page
 app.use(express.static(path.join(__dirname, 'web')))
