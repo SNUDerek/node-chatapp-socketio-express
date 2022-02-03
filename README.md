@@ -6,6 +6,9 @@ this is based a number of online tutorials, see `References` section.
 
 ## features and todo
 
+- (todo) refactor the user leaving and adding code, don't like the list approach
+- (todo) fix the craptastic layout
+- (todo) dockerize
 
 ## requirements
 
