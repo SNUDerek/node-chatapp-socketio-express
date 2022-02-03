@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+
+h1 {text-align: center;}
+h3 {text-align: center;}
+
+#container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#top_div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 80%;
+  background-color: #92a8d1;
+  text-align: center;
+}
+
+#left_div {
+  position: absolute;
+  top: 20%;
+  right: 80%;
+  left: 0;
+  bottom: 20%;
+  text-align: left;
+  background-color: #dbc6ec;
+}
+
+#right_div {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 20%;
+  bottom: 20%;
+  text-align: left;
+  background-color: #FFB6C1;
+}
+
+#bottom_div {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ffb6c1;
+  text-align: right;
+}
+
+textarea {
+     width: 100%;
+     height:100%;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
+}
+        </style>
+    <head>
 <body>
 
-<h1>crapchat</h1>
-<h2 id="room"></h2>
-<ul id="users"></ul>
+<div id="container">
 
-  <textarea id="chat-history" name="chat-history" rows="16" cols="50"></textarea>
-    <br><br>
-    <form id="chat-form">
-      <label for="message">message:</label>
-      <input type="text" id="message" minlength=1, required, name="message"><br><br>
-      <input id="send" type="submit" value="submit">
-    </form>
+    <div id="top_div">
+        <h1>💩 crapChat 💩</h1>
+    </div>
+    <div id="left_div">
+        <h3 id="room"></h3>
+        <ul id="users"></ul>
+    </div>    
+    <div id="right_div">
+        <textarea id="chat-history" name="chat-history" rows="16" cols="50"></textarea>
+    </div>    
+    <div id="bottom_div">
+        <form id="chat-form">
+            <br>
+            <label for="message">message:</label>
+            <input type="text" id="message" minlength=1, required, name="message", size=80>
+            <input id="send" type="submit" value="submit">
+          </form>
+          <br>
+          <button id="exit-button" type="button">exit</button>
+    </div>
+    
+    </div>
 
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"

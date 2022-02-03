@@ -58,7 +58,7 @@ function setMessage(message) {
 
 // add room name to DOM
 function setRoomName(room) {
-    roomName.innerText = room
+    roomName.innerText = "room: "+room
 }
 
 // add users to DOM
@@ -67,3 +67,12 @@ function setUserList(users) {
     console.log(userElements)
     userList.innerHTML = userElements
 }
+
+// leave room and go back
+document.getElementById('exit-button').addEventListener('click', () => {
+    const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+    if (leaveRoom) {
+      window.location = '../index.html';
+    } else {
+    }
+})  
