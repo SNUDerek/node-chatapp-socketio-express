@@ -4,6 +4,8 @@ basic node websocket chat interface with express & sockets.io.
 
 this is based a number of online tutorials, see `References` section.
 
+![screenshot](screenshot.png)
+
 ## features and todo
 
 - (todo) refactor the user leaving and adding code, don't like the list approach
@@ -12,6 +14,7 @@ this is based a number of online tutorials, see `References` section.
 
 ## requirements
 
+- `npm` and `node`
 
 ## start
 
@@ -25,6 +28,7 @@ npm start
 
 ## usage/testing
 
+by default, it runs on port 5000. navigate to `http://localhost:5000` (or server addr if running remotely)
 
 ## references
 
