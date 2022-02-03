@@ -7,11 +7,11 @@ const chatForm = document.getElementById('chat-form')
 const socket = io()
 
 // on join
-const { uname, room } = Qs.parse(location.search, {
+const { username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 })
-socket.emit('joinChat', { uname, room })
-console.log(`${uname} connected to ${room}`)
+socket.emit('joinChat', { username, room })
+console.log(`${username} connected to ${room}`)
 
 // get users
 socket.on('roomUsers', ({ room, users }) => {
@@ -47,8 +47,7 @@ function scrollHistory() {
 // send message to DOM
 function setMessage(message) {
     let history = chatHistory.value
-    // newLine = `\r\n[${message.time}] ${message.uname}: ${message.text}`
-    newLine = `\r\n${message}`
+    newLine = `\r\n[${message.time}] ${message.name}: ${message.text}`
     history = history + newLine
     chatHistory.value = history
     chatHistory.focus()
@@ -59,15 +58,12 @@ function setMessage(message) {
 
 // add room name to DOM
 function setRoomName(room) {
-    roomName.value = room
+    roomName.innerText = room
 }
 
 // add users to DOM
 function setUserList(users) {
-    userList.innerHTML = ''
-    users.forEach((user) => {
-        const li = document.createElement('li')
-        li.innerText = user.username
-        userList.appendChild(li)
-    })
+    const userElements = `${users.map(user => `<li>${user.name}</li>`).join('')}`
+    console.log(userElements)
+    userList.innerHTML = userElements
 }
