@@ -1,23 +1,99 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <style>
+
+h1 {text-align: center;}
+h3 {text-align: center;}
+
+#container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#top_div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 80%;
+  text-align: center;
+}
+
+#left_div {
+  position: absolute;
+  top: 20%;
+  right: 60%;
+  left: 0;
+  bottom: 20%;
+  text-align: left;
+}
+
+#center_div {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  left: 40%;
+  bottom: 20%;
+  text-align: left;
+}
+
+#right_div {
+  position: absolute;
+  top: 20%;
+  right: 60%;
+  left: 0;
+  bottom: 20%;
+  text-align: left;
+}
+
+#bottom_div {
+  position: absolute;
+  top: 80%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: right;
+}
+
+textarea {
+     width: 100%;
+     height:100%;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
+}
+  </style>
+<head>
 <body>
 
-<h1>💩 crapChat 💩</h1>
+<div id="container">
 
-<form action="chat.html">
-  <label for="username">username:</label>
-  <input type="text" id="username" minlength=3, maxlength=32, placeholder="insert username", name="username"><br><br>
-  <label for="room">chatroom:</label>
-  <select name="room" id="room">
-    <option value="crap">crap</option>
-    <option value="coding">coding</option>
-    <option value="gaming">gaming</option>
-    <option value="social">social</option>
-  </select>
-  <input type="submit" value="chat">
-</form>
+  <div id="top_div">
+    <h1>💩 crapChat 💩</h1>
+  </div>
+  <div id="left_div"></div>
+  <div id="center_div">
+    <form action="chat.html">
+    <label for="username">username:</label>
+    <input type="text" id="username" minlength=3, maxlength=32, placeholder="insert username", name="username"><br><br>
+    <label for="room">chatroom:</label>
+    <select name="room" id="room">
+        <option value="crap">crap</option>
+        <option value="coding">coding</option>
+        <option value="gaming">gaming</option>
+        <option value="social">social</option>
+    </select>
+    <input type="submit" value="chat">
+    </form>
 
-<p>enter username, select room, and hit [chat].</p>
+    <p>enter username, select room, and hit [chat].</p>
+  </div>
+  <div id="right_div"></div>
+  <div id="bottom_div"></div>
 
 </body>
 </html>

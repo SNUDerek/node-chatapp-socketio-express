@@ -32,6 +32,6 @@ by default, it runs on port 5000. navigate to `http://localhost:5000` (or server
 
 ## references
 
-based primarily on:
+based primarily on the tutorial below, except i roll my own, arguably way more "awesome", frontend:
 
 [Realtime Chat With Users & Rooms - Socket.io, Node & Express](https://www.youtube.com/watch?v=jD7FnbI76Hg)  
